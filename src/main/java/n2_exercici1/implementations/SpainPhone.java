@@ -11,13 +11,13 @@ public class SpainPhone implements IPhone {
 	public SpainPhone() {
 	
 		this.longDistance = "+34";
-		this.mobile = " ";
-		this.prefix = (" ");
+		this.mobile = "";
+		this.prefix = "";
 	}
 
 	@Override
 	public String showPhoneFormat() {
-		return longDistance + mobile + prefix;
+		return "(" + longDistance + mobile + prefix + ") ";
 	}
 	
 }

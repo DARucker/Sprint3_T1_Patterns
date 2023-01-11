@@ -4,7 +4,7 @@ import n2_exercici1.intermediate.AbstractFactory;
 
 public class FabricProducer {
 
-	public AbstractFactory getFactory(String type) {
+	public static AbstractFactory getFactory(String type) {
 		if (type.equalsIgnoreCase("phone")) {
 			return new PhoneFabric();
 		} else if (type.equalsIgnoreCase("address")) {
