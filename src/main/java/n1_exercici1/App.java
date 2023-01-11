@@ -8,25 +8,24 @@ public class App {
 
 	/* 
 	 * En todos los ejercicios, crea un proyecto con una clase Main que demuestre 
-	 * el uso del patrón (con las necesarias invocaciones).
+	 * el uso del patron (con las necesarias invocaciones).
 	 * 
 	 * Singleton
 	 * Crea una clase que replique el funcionamiento del comando 'Undo'. Esta clase 
-	 * será utilizada por la clase Main, que permitirá introducir opciones por consola. 
+	 * sera utilizada por la clase Main, que permitira introducir opciones por consola. 
 	 * 
-	 * La clase 'Undo' debe guardar los últimos pedidos introducidos. Debe permitir
-	 * añadir o eliminar pedidos, así como listar los últimos pedidos introducidos 
+	 * La clase 'Undo' debe guardar los ultimos pedidos introducidos. Debe permitir
+	 * aÃ±adir o eliminar pedidos, asi como listar los ultimos pedidos introducidos 
 	 * (similar al comando 'history' en Linux).
 	 * 
-	 *  La clase 'Undo' debe implementar imprescindiblemente un patrón Singleton. 
+	 *  La clase 'Undo' debe implementar imprescindiblemente un patron Singleton. 
 	 */
 
 	public static String response;
-	public static List<Object> controlObjecto = new ArrayList<>();
+	public static List<Object> controlObject = new ArrayList<>();
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		App.application();
+			App.application();
 		
 	}
 	
@@ -45,16 +44,16 @@ public class App {
 		System.out.println("****" + "\n");
 		App.captureString("insert your choice: ");		
 		Undo undo = Undo.getInstance();
-		controlObjecto.add(undo);
+		controlObject.add(undo);
 		undo.dataStack(response);
 		
 		} while (!response.equals("7"));
 		System.out.println(" ");
 		System.out.println("Used objects list: "  + "\n");
 		int j = 0;
-		for (Object object : controlObjecto) {
+		for (Object object : controlObject) {
 			j++;
-			System.out.println("lap number " + j + " objeto utilizado: " + object);
+			System.out.println("lap number " + j + " objeto used: " + object);
 		}
 		
 	}

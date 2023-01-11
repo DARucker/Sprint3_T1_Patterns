@@ -6,7 +6,7 @@ import java.util.Deque;
 public class Undo {
 
 	private static Undo instance;
-	static Deque <String> stack;
+	private static Deque <String> stack;
 
 	private Undo() { }
     
